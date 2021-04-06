@@ -1,0 +1,8 @@
+@import './styles/variables.scss';
+
+.columnLeft {
+  background: $primary;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('./styles/images/background-column-left.png');
+}

@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Intro, ImageProfile, AboutMe, BasicInformation, SkillsInformation } from './components';
+import { 
+  itemsEducation, 
+  itemsExperience, 
+  itemsReference, 
+  skillsProeficiency, 
+  skillsPersonal, 
+  skillsProfessional
+} from './database'
+
+import { columnLeft } from './App.module.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Row className={'justify-content-center'}>
+        <Col md={6} className={columnLeft}>
+          <Intro fullName={'Santiago M'} jobTitle={'Drupal developer'}/>
+
+          <BasicInformation title={'Education'} items={itemsEducation}/>
+          <BasicInformation title={'Experience'} items={itemsExperience}/>
+          <BasicInformation title={'Reference'} items={itemsReference}/>
+        </Col>
+        <Col md={4}>
+          <ImageProfile />
+          <AboutMe description={'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries'}/>
+
+          <SkillsInformation title={'Professional Skill'} items={skillsProfessional} />
+          <SkillsInformation title={'Proficiency Skill'} items={skillsProeficiency} />
+          <SkillsInformation title={'Personal Skill'} items={skillsPersonal} />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

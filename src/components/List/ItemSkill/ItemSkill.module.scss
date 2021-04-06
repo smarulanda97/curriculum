@@ -1,0 +1,12 @@
+.itemSkill {
+  display: flex;
+  justify-content: space-between;
+
+  h4 {
+    text-transform: capitalize;
+  }
+  
+  h4, p {
+    margin-bottom: 0;
+  }
+}

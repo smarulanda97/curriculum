@@ -1,0 +1,16 @@
+@import '../../../styles/variables.scss';
+
+.itemList {
+  h4 {
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+  
+  h4, p {
+    color: $white;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,15 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+$primary: #232234;
+// $secondary: #EA7099;
+$secondary: #02dcff;
+
+$gray: #C0C3C3;
+$white: #FEFEFE;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "white": $white
+);
